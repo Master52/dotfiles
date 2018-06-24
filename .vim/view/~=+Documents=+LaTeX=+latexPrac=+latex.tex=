@@ -1,0 +1,147 @@
+let s:so_save = &so | let s:siso_save = &siso | set so=0 siso=0
+argglobal
+nnoremap <buffer> <silent> \= :silent! call system("xdotool key --window " . b:MuPDFWindowID . " equal")
+nnoremap <buffer> <silent> \+ :silent! call system("xdotool key --window " . b:MuPDFWindowID . " plus")
+nnoremap <buffer> <silent> \- :silent! call system("xdotool key --window " . b:MuPDFWindowID . " minus")
+nnoremap <buffer> <silent> \t :silent! call system("xdotool key --window " . b:MuPDFWindowID . " t")
+nnoremap <buffer> <silent> \m :silent! call system("xdotool key --window " . b:MuPDFWindowID . " m")
+nnoremap <buffer> <silent> \G :silent! call system("xdotool key --window " . b:MuPDFWindowID . " G")
+let s:cpo_save=&cpo
+set cpo&vim
+nnoremap <buffer> <silent> \<Right> :silent! call system("xdotool key --window " . b:MuPDFWindowID . " Right")
+nnoremap <buffer> <silent> \<Left> :silent! call system("xdotool key --window " . b:MuPDFWindowID . " Left")
+nnoremap <buffer> <silent> \<Down> :silent! call system("xdotool key --window " . b:MuPDFWindowID . " Down")
+nnoremap <buffer> <silent> \<Up> :silent! call system("xdotool key --window " . b:MuPDFWindowID . " Up")
+nnoremap <buffer> <silent> \<PageUp> :silent! call system("xdotool key --window " . b:MuPDFWindowID . " Page_Up")
+nnoremap <buffer> <silent> \<PageDown> :silent! call system("xdotool key --window " . b:MuPDFWindowID . " Page_Down")
+nnoremap <buffer> <silent> \c :call ManualCompilation()
+nnoremap <buffer> <silent> \r :call MuPDFReverse()
+nnoremap <buffer> <silent> \f :call MuPDFForward()
+nnoremap <buffer> <silent> \s :call CheckLiveUpdateStatus()
+nnoremap <buffer> <silent> \o :call UpdatingToggle()
+nnoremap <buffer> <silent> \p :call PDFViewingToggle()
+let &cpo=s:cpo_save
+unlet s:cpo_save
+setlocal keymap=
+setlocal noarabic
+setlocal autoindent
+setlocal backupcopy=
+setlocal balloonexpr=
+setlocal nobinary
+setlocal nobreakindent
+setlocal breakindentopt=
+setlocal bufhidden=
+setlocal buflisted
+setlocal buftype=
+setlocal nocindent
+setlocal cinkeys=0{,0},0),:,0#,!^F,o,O,e
+setlocal cinoptions=
+setlocal cinwords=if,else,while,do,for,switch
+setlocal colorcolumn=
+setlocal comments=sO:%\ -,mO:%\ \ ,eO:%%,:%
+setlocal commentstring=%%s
+setlocal complete=.,w,b,u,t,i
+setlocal concealcursor=
+setlocal conceallevel=0
+setlocal completefunc=
+setlocal nocopyindent
+setlocal cryptmethod=
+setlocal nocursorbind
+setlocal nocursorcolumn
+setlocal cursorline
+setlocal define=\\\\\\([egx]\\|char\\|mathchar\\|count\\|dimen\\|muskip\\|skip\\|toks\\)\\=def\\|\\\\font\\|\\\\\\(future\\)\\=let\\|\\\\new\\(count\\|dimen\\|skip\\|muskip\\|box\\|toks\\|read\\|write\\|fam\\|insert\\)\\|\\\\\\(re\\)\\=new\\(boolean\\|command\\|counter\\|environment\\|font\\|if\\|length\\|savebox\\|theorem\\(style\\)\\=\\)\\s*\\*\\=\\s*{\\=\\|DeclareMathOperator\\s*{\\=\\s*
+setlocal dictionary=
+setlocal nodiff
+setlocal equalprg=
+setlocal errorformat=
+setlocal noexpandtab
+if &filetype != 'tex'
+setlocal filetype=tex
+endif
+setlocal fixendofline
+setlocal foldcolumn=0
+setlocal foldenable
+setlocal foldexpr=0
+setlocal foldignore=#
+setlocal foldlevel=0
+setlocal foldmarker={{{,}}}
+setlocal foldmethod=manual
+setlocal foldminlines=1
+setlocal foldnestmax=20
+setlocal foldtext=foldtext()
+setlocal formatexpr=
+setlocal formatoptions=tcq
+setlocal formatlistpat=^\\s*\\d\\+[\\]:.)}\\t\ ]\\s*
+setlocal formatprg=
+setlocal grepprg=
+setlocal iminsert=0
+setlocal imsearch=-1
+setlocal include=\\\\input\\|\\\\include{
+setlocal includeexpr=substitute(v:fname,\ '^.\\{-}{\\|}.*',\ '',\ 'g')
+setlocal indentexpr=GetTeXIndent()
+setlocal indentkeys=0{,0},:,0#,!^F,o,O,e,[,(,{,),},],&,=\\bibitem,=\\item
+setlocal noinfercase
+setlocal iskeyword=@,48-57,_,192-255
+setlocal keywordprg=
+setlocal nolinebreak
+setlocal nolisp
+setlocal lispwords=
+setlocal list
+setlocal makeencoding=
+setlocal makeprg=
+setlocal matchpairs=(:),{:},[:]
+setlocal modeline
+setlocal modifiable
+setlocal nrformats=bin,octal,hex
+setlocal number
+setlocal numberwidth=5
+setlocal omnifunc=javacomplete#Complete
+setlocal path=
+setlocal nopreserveindent
+setlocal nopreviewwindow
+setlocal quoteescape=\\
+setlocal noreadonly
+setlocal relativenumber
+setlocal norightleft
+setlocal rightleftcmd=search
+setlocal noscrollbind
+setlocal shiftwidth=8
+setlocal noshortname
+setlocal signcolumn=auto
+setlocal nosmartindent
+setlocal softtabstop=0
+setlocal nospell
+setlocal spellcapcheck=[.?!]\\_[\\])'\"\	\ ]\\+
+setlocal spellfile=
+setlocal spelllang=en
+setlocal statusline=
+setlocal suffixesadd=.tex
+setlocal swapfile
+setlocal synmaxcol=3000
+if &syntax != 'tex'
+setlocal syntax=tex
+endif
+setlocal tabstop=8
+setlocal tagcase=
+setlocal tags=
+setlocal termkey=
+setlocal termsize=
+setlocal textwidth=0
+setlocal thesaurus=
+setlocal noundofile
+setlocal undolevels=-123456
+setlocal nowinfixheight
+setlocal nowinfixwidth
+setlocal wrap
+setlocal wrapmargin=0
+silent! normal! zE
+let s:l = 2 - ((1 * winheight(0) + 20) / 40)
+if s:l < 1 | let s:l = 1 | endif
+exe s:l
+normal! zt
+2
+normal! 07|
+lcd ~/Documents/LaTeX/latexPrac
+let &so = s:so_save | let &siso = s:siso_save
+doautoall SessionLoadPost
+" vim: set ft=vim :
