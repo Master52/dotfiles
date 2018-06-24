@@ -1,0 +1,28 @@
+# vim: filetype=neomuttrc
+# muttrc file for account Master9008
+set realname = "Hatim Master"
+set from = "harajmast9008@gmail.com"
+set smtp_url = "smtp://harajmast9008@gmail.com@smtp.gmail.com:587/"
+set sendmail = "/usr/bin/msmtp -a Master9008"
+set folder = "~/.mail/Master9008"
+set header_cache = ~/.config/mutt/accounts/Master9008/cache/headers
+set message_cachedir = ~/.config/mutt/accounts/Master9008/cache/bodies
+set certificate_file = ~/.config/mutt/accounts/Master9008/certificates
+source "~/.config/mutt/credentials/getmuttpass Master9008 |"
+
+set mbox_type = Maildir
+set ssl_starttls = yes
+set ssl_force_tls = yes
+
+bind index,pager g noop
+bind index gg first-entry
+mailboxes =[Gmail].Drafts =INBOX =[Gmail].Starred =[Gmail].Spam =Trash =[Gmail].Sent Mail =[Gmail].Important =[Gmail].Trash =N1-Snoozed
+macro index,pager gi "<change-folder>=INBOX<enter>" "Go to inbox."
+macro index,pager gs "<change-folder>=[Gmail].Sent Mail<enter>" "Go to sent."
+macro index,pager gd "<change-folder>=[Gmail].Drafts<enter>" "Go to drafts."
+macro index,pager gt "<change-folder>=Trash<enter>" "Go to trash."
+macro index,pager gt "<change-folder>=[Gmail].Trash<enter>" "Go to trash."
+macro index,pager gS "<change-folder>=[Gmail].Spam<enter>" "Go to spam."
+set spoolfile = "+INBOX"
+set record = "+[Gmail].Sent Mail"
+set postponed = "+[Gmail].Drafts"

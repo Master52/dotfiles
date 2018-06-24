@@ -1,0 +1,165 @@
+{
+   "checksum": "52265a48216f062d70d7107586a28a2e",
+   "roots": {
+      "bookmark_bar": {
+         "children": [ {
+            "date_added": "13155498971303000",
+            "id": "7",
+            "meta_info": {
+               "last_visited_desktop": "13160474317579859"
+            },
+            "name": "Apple",
+            "sync_transaction_version": "1",
+            "type": "url",
+            "url": "http://www.apple.com/"
+         }, {
+            "date_added": "13155498971319000",
+            "id": "8",
+            "meta_info": {
+               "last_visited_desktop": "13165492190199313"
+            },
+            "name": "Bing",
+            "sync_transaction_version": "24",
+            "type": "url",
+            "url": "http://www.bing.com/"
+         }, {
+            "date_added": "13148312716968534",
+            "id": "9",
+            "meta_info": {
+               "last_visited_desktop": "13165738624757211"
+            },
+            "name": "iCloud",
+            "sync_transaction_version": "30",
+            "type": "url",
+            "url": "https://www.icloud.com/#"
+         }, {
+            "date_added": "13138138477302735",
+            "id": "10",
+            "meta_info": {
+               "last_visited_desktop": "13160426717420257"
+            },
+            "name": "Home - Quora",
+            "sync_transaction_version": "13",
+            "type": "url",
+            "url": "https://www.quora.com/"
+         }, {
+            "date_added": "13138138469919888",
+            "id": "11",
+            "meta_info": {
+               "last_visited_desktop": "13161676124491871"
+            },
+            "name": "Science on Flipboard",
+            "sync_transaction_version": "22",
+            "type": "url",
+            "url": "https://flipboard.com/section/science-4p630etra30c73u8"
+         }, {
+            "date_added": "13148318632816641",
+            "id": "12",
+            "meta_info": {
+               "last_visited_desktop": "13157617916999453"
+            },
+            "name": "WhatsApp",
+            "sync_transaction_version": "15",
+            "type": "url",
+            "url": "https://web.whatsapp.com/"
+         }, {
+            "date_added": "13148464624590280",
+            "id": "13",
+            "meta_info": {
+               "last_visited_desktop": "13165515763353355"
+            },
+            "name": "Photos - Google Photos",
+            "sync_transaction_version": "27",
+            "type": "url",
+            "url": "https://photos.google.com/"
+         }, {
+            "date_added": "13150552723759250",
+            "id": "14",
+            "meta_info": {
+               "last_visited_desktop": "13157971203436490"
+            },
+            "name": "Find My Device",
+            "sync_transaction_version": "17",
+            "type": "url",
+            "url": "https://www.google.com/android/find?u=1&rapt=AEjHL4MeTi2Avor4ki_e4SKatOS310IM7v7DSTvua5SixaQsk8qVxZxWX_6zw1Yep6EvuVa33YSnA8MNzM7TBEeo9CMp-xnF5g"
+         }, {
+            "date_added": "13153838630712961",
+            "id": "15",
+            "meta_info": {
+               "last_visited_desktop": "13153900999376012"
+            },
+            "name": "HackerRank",
+            "sync_transaction_version": "18",
+            "type": "url",
+            "url": "https://www.hackerrank.com/challenges/30-review-loop/problem"
+         }, {
+            "date_added": "13102446837000000",
+            "id": "16",
+            "meta_info": {
+               "last_visited_desktop": "13157617489399385"
+            },
+            "name": "Manjaro Linux",
+            "sync_transaction_version": "19",
+            "type": "url",
+            "url": "https://manjaro.org/"
+         }, {
+            "date_added": "13102446886000000",
+            "id": "17",
+            "name": "Manjaro Wiki",
+            "sync_transaction_version": "1",
+            "type": "url",
+            "url": "https://wiki.manjaro.org/index.php?title=Main_Page"
+         }, {
+            "date_added": "13102446920000000",
+            "id": "18",
+            "name": "Manjaro Forum",
+            "sync_transaction_version": "1",
+            "type": "url",
+            "url": "https://forum.manjaro.org/"
+         } ],
+         "date_added": "13161465696952384",
+         "date_modified": "13155498971319000",
+         "id": "1",
+         "name": "Bookmarks bar",
+         "type": "folder"
+      },
+      "other": {
+         "children": [ {
+            "date_added": "13149189437743864",
+            "id": "6",
+            "meta_info": {
+               "last_visited_desktop": "13149189437845352"
+            },
+            "name": "Speeding Up WEP Hacking : ARP request replay attack - Kali Linux Hacking Tutorials",
+            "sync_transaction_version": "1",
+            "type": "url",
+            "url": "http://www.kalitutorials.net/2014/03/speeding-up-wep-hacking-in-kali.html"
+         } ],
+         "date_added": "13161465696952394",
+         "date_modified": "13149189437743864",
+         "id": "2",
+         "name": "Other bookmarks",
+         "type": "folder"
+      },
+      "sync_transaction_version": "30",
+      "synced": {
+         "children": [ {
+            "date_added": "13160474289598086",
+            "id": "5",
+            "meta_info": {
+               "last_visited_desktop": "13160474329888592"
+            },
+            "name": "Introduction to operating system",
+            "sync_transaction_version": "1",
+            "type": "url",
+            "url": "https://www.slideshare.net/mobile/AkshayIthape2/introduction-to-operating-system-86010864"
+         } ],
+         "date_added": "13161465696952396",
+         "date_modified": "13160474289598086",
+         "id": "3",
+         "name": "Mobile bookmarks",
+         "type": "folder"
+      }
+   },
+   "version": 1
+}
