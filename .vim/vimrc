@@ -72,10 +72,11 @@ inoremap j;gui <++>
 inoremap lenght length
 inoremap widht width
 inoremap heigth height
-nnoremap <C-y> "+y
-vnoremap <C-y> "+y
+nnoremap <C-c> "+y
+vnoremap <C-c> "+y
 nnoremap <C-p> "+gP
 nnoremap <C-p> "+gP
+nnoremap qw :wq
 
 "For Normal mode
 inoremap jw <Esc>
@@ -224,7 +225,22 @@ autocmd Filetype python imap ;im from z import <++> <esc>Fzs
 autocmd Filetype python imap ;nm if __name__ == '__main__':<Enter>
 
 "C/C++
-autocmd Filetype C imap <F9> <Esc>:w<CR>:!clear;gcc % && ./a.out<CR>
+autocmd Filetype c,cpp imap ?io #include<space><stdio.h><Enter>
+autocmd Filetype c,cpp imap ?str #include<space><string.h><Enter>
+autocmd Filetype c,cpp imap ?ast #include<space><assert.h><Enter>
+autocmd Filetype c,cpp imap ?lib #include<space><stdlib.h><Enter>
+autocmd Filetype c,cpp imap ?ti #include<space><time.h><Enter>
+autocmd Filetype c,cpp imap ?st #include<space>"/home/master/MEGAsync/Generic-C-header-file/Stack.h"<Enter>
+autocmd Filetype c,cpp imap ?fl #include<space>"/home/master/MEGAsync/Generic-C-header-file/ForwordList.h"<Enter>
+autocmd Filetype c,cpp imap ?q #include<space>"/home/master/MEGAsync/Generic-C-header-file/Queue.h"<Enter>
+autocmd Filetype c,cpp imap ?el printf("\n");
+autocmd Filetype c,cpp imap ?p printf("z"<++>);<++> <esc>Fzs
+autocmd Filetype c,cpp imap ?s scanf("z",<++>);<++> <esc>Fzs
+autocmd Filetype c,cpp imap ?f for(z;<++>;<++>)<space>{<++><Enter>} <esc>1kfzs
+autocmd Filetype c,cpp imap ?w while(z)<space>{<++><Enter>} <esc>1kfzs
+autocmd Filetype c,cpp imap ?mn int<space>main(int argc,char* argv[])<space>{<Enter>return 0;<Enter>} <esc>1kO
+autocmd Filetype c,cpp imap ??? <esc>VyGp$xA{<Enter>}<esc>O
+
 
 
 colorscheme	Benokai
