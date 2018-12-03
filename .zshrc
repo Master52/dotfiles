@@ -8,8 +8,7 @@
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="blinks"
-neofetch
+ZSH_THEME="kolo"
 
 # Set list of themes to load
 # Setting this variable when ZSH_THEME=random
@@ -41,7 +40,7 @@ neofetch
 # ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
-# COMPLETION_WAITING_DOTS="true"
+ COMPLETION_WAITING_DOTS="true"
 
 # Uncomment the following line if you want to disable marking untracked files
 # under VCS as dirty. This makes repository status check for large repositories
@@ -62,6 +61,10 @@ neofetch
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
   git
+  sudo
+  vagrant
+  zsh-syntax-highlighting
+  zsh-autosuggestions
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -98,6 +101,11 @@ source $ZSH/oh-my-zsh.sh
 #
 # perform parameter expansion/command substitution in prompt
 # Prefer vi shortcuts
+
+
+
+
+
 alias v="vim"
 alias sv="sudo vim"
 alias ls='ls --color=auto --group-directories-first'
@@ -125,11 +133,12 @@ alias youtube="youtube-viewer"
 alias gth="cd ~ && ls -a"
 alias gtcf="cd ~/.config && ls -a"
 alias cfi="vim ~/.config/i3/config"
-alias gtd="cd ~/Documents && ls -a"
-alias gtD="cd ~/Downloads && ls -a"
-alias gtp="cd ~/Pictures && ls -a"
-alias gtv="cd ~/Videos && ls -a"
-alias gtm="cd ~/Music && ls -a"
+alias gtd="cd /mnt/c/Users/HP/Documents && ls -a"
+alias gtde="cd /mnt/c/Users/HP/Desktop && ls -a"
+alias gtD="cd /mnt/c/Users/HP//Downloads && ls -a"
+alias gtp="cd /mnt/c/Users/HP//Pictures && ls -a"
+alias gtv="cd /mnt/c/Users/HP/~/Videos && ls -a"
+alias gtm="cd /mnt/c/Users/HP/~/Music && ls -a"
 alias cfb="vim ~/.config/Scripts/bashrc"
 alias rp="vim ~/javascript\&HTML/objectPractice.js"
 alias ct="chromium ~/javascript\&HTML/test.html >/dev/null 2&>1 &"
@@ -144,6 +153,7 @@ alias rtv="rtv --enable-media"
 alias ytmp3="youtube-dl --extract-audio --audio-format mp3"
 alias yt="youtube-dl -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/bestvideo+bestaudio' --merge-output-format mp4"
 alias cls="clear;neofetch --w3m ~/joker_PNG41.png"
+alias gtmeg="cd /mnt/f/megasync/ && ls -a"
 
 
 
