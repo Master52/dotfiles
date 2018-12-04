@@ -114,7 +114,7 @@ alias b="cd .. && ls -a"
 alias q="exit"
 alias e="exit"
 
-alias update="packer -Syyuu --noconfirm"
+alias update="sudo apt-get update && sudo apt-get upgrade"
 alias remove="sudo pacman -Rsc"
 alias list="sudo pacman -Qn"
 
