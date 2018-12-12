@@ -102,6 +102,7 @@ source $ZSH/oh-my-zsh.sh
 # perform parameter expansion/command substitution in prompt
 # Prefer vi shortcuts
 
+figlet Master
 
 
 
@@ -137,8 +138,8 @@ alias gtd="cd /mnt/c/Users/HP/Documents && ls -a"
 alias gtde="cd /mnt/c/Users/HP/Desktop && ls -a"
 alias gtD="cd /mnt/c/Users/HP//Downloads && ls -a"
 alias gtp="cd /mnt/c/Users/HP//Pictures && ls -a"
-alias gtv="cd /mnt/c/Users/HP/~/Videos && ls -a"
-alias gtm="cd /mnt/c/Users/HP/~/Music && ls -a"
+alias gtv="cd /mnt/c/Users/HP/Videos && ls -a"
+alias gtm="cd /mnt/c/Users/HP/Music && ls -a"
 alias cfb="vim ~/.config/Scripts/bashrc"
 alias rp="vim ~/javascript\&HTML/objectPractice.js"
 alias ct="chromium ~/javascript\&HTML/test.html >/dev/null 2&>1 &"
