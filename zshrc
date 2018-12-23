@@ -8,7 +8,7 @@
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="kolo"
+ZSH_THEME="Soliah"
 
 # Set list of themes to load
 # Setting this variable when ZSH_THEME=random
@@ -102,7 +102,6 @@ source $ZSH/oh-my-zsh.sh
 # perform parameter expansion/command substitution in prompt
 # Prefer vi shortcuts
 
-figlet Master
 
 
 
@@ -115,9 +114,11 @@ alias b="cd .. && ls -a"
 alias q="exit"
 alias e="exit"
 
-alias update="sudo apt-get update && sudo apt-get upgrade"
-alias remove="sudo pacman -Rsc"
-alias list="sudo pacman -Qn"
+alias packer="sudo apt-get update && sudo apt-get install"
+alias remove="sudo apt-get remove"
+alias search="sudo apt-cache search"
+alias uu="sudo apt-get update && sudo apt-get upgrade"
+alias it="sudo apt-get install"
 
 #Term only
 alias vd="pamixer -d 10"
@@ -134,15 +135,13 @@ alias youtube="youtube-viewer"
 alias gth="cd ~ && ls -a"
 alias gtcf="cd ~/.config && ls -a"
 alias cfi="vim ~/.config/i3/config"
-alias gtd="cd /mnt/c/Users/HP/Documents && ls -a"
-alias gtde="cd /mnt/c/Users/HP/Desktop && ls -a"
-alias gtD="cd /mnt/c/Users/HP//Downloads && ls -a"
-alias gtp="cd /mnt/c/Users/HP//Pictures && ls -a"
-alias gtv="cd /mnt/c/Users/HP/Videos && ls -a"
-alias gtm="cd /mnt/c/Users/HP/Music && ls -a"
+alias gd="cd ~/Documents && ls -a"
+alias gde="cd ~/Desktop && ls -a"
+alias gD="cd ~/Downloads && ls -a"
+alias gp="cd ~/Pictures && ls -a"
+alias gv="cd ~/Videos && ls -a"
+alias gm="cd ~/Music && ls -a"
 alias cfb="vim ~/.config/Scripts/bashrc"
-alias rp="vim ~/javascript\&HTML/objectPractice.js"
-alias ct="chromium ~/javascript\&HTML/test.html >/dev/null 2&>1 &"
 alias r="ranger"
 alias sr="sudo ranger"
 alias cfr="vim ~/.config/ranger/rc.conf"
@@ -154,15 +153,16 @@ alias rtv="rtv --enable-media"
 alias ytmp3="youtube-dl --extract-audio --audio-format mp3"
 alias yt="youtube-dl -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/bestvideo+bestaudio' --merge-output-format mp4"
 alias cls="clear;neofetch --w3m ~/joker_PNG41.png"
-alias gtmeg="cd /mnt/f/megasync/ && ls -a"
-
+alias gtmeg="cd /media/master/F/megasync/ && ls -a"
+alias gtF="cd /media/master/F && ls -al"
+alias ccat="highlight --out-format=ansi"
 
 
 alias bu="light -A 5"
 alias bd="light -U 5"
-alias mail="offlineimap && neomutt"
 
 #Torrent
 alias ts="torrench -t"
 alias torrent="transmission-remote-cli"
 
+bindkey -v
