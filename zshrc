@@ -1,14 +1,10 @@
-
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
-
 # Path to your oh-my-zsh installation.
   export ZSH=/home/master/.oh-my-zsh
-
-
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="Soliah"
+ZSH_THEME="rkj"
 
 # Set list of themes to load
 # Setting this variable when ZSH_THEME=random
@@ -104,8 +100,6 @@ source $ZSH/oh-my-zsh.sh
 
 
 
-
-
 alias v="vim"
 alias sv="sudo vim"
 alias ls='ls --color=auto --group-directories-first'
@@ -114,22 +108,20 @@ alias b="cd .. && ls -a"
 alias q="exit"
 alias e="exit"
 
-alias packer="sudo apt-get update && sudo apt-get install"
+packer() { sudo apt-get update && sudo apt-get install $1 && notify-send -u low 'App Installed' }
 alias remove="sudo apt-get remove"
 alias search="sudo apt-cache search"
-alias uu="sudo apt-get update && sudo apt-get upgrade"
+alias uu="yes | sudo apt-get update && sudo apt-get upgrade && notify-send -u low 'System Updated' "
 alias it="sudo apt-get install"
 
 #Term only
 alias vd="pamixer -d 10"
 alias vu="pamixer -i 10"
-alias mnt="sudo mount /dev/sda2 /mnt/Salman"
-alias umnt="sudo umount /dev/sda2"
+alias mnt="sudo mount /dev/sda3 /media/master/WINDOWS"
+alias umnt="sudo umount /dev/sda3"
 alias rnm="sudo systemctl restart NetworkManager"
 
 #etc
-alias yt="youtube-dl -ic"
-alias yta="youtube-dl -xic"
 alias youtube="youtube-viewer"
 
 alias gth="cd ~ && ls -a"
@@ -150,12 +142,13 @@ alias cfz="vim ~/.zshrc"
 alias bm="bashmount"
 alias pi="ping -c 10 duckduckgo.com"
 alias rtv="rtv --enable-media"
-alias ytmp3="youtube-dl --extract-audio --audio-format mp3"
-alias yt="youtube-dl -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/bestvideo+bestaudio' --merge-output-format mp4"
+ytmp3() { youtube-dl --extract-audio --audio-format mp3 $1 && notify-send -u low -a mpv 'Audio Downloaded!'}
+yt() {youtube-dl -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/bestvideo+bestaudio' --merge-output-format mp4 $1 && notify-send -u low -a mpv 'Video Downloaded!'}
 alias cls="clear;neofetch --w3m ~/joker_PNG41.png"
 alias gtmeg="cd /media/master/F/megasync/ && ls -a"
 alias gtF="cd /media/master/F && ls -al"
 alias ccat="highlight --out-format=ansi"
+wt() { wget $1 && notify-send -u low  'File Downloaded' }
 
 
 alias bu="light -A 5"
@@ -164,5 +157,5 @@ alias bd="light -U 5"
 #Torrent
 alias ts="torrench -t"
 alias torrent="transmission-remote-cli"
-
+alias tor="torrench -tksxrnlibg" 
 bindkey -v
