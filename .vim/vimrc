@@ -137,8 +137,14 @@ noremap <C-L> :vertical resize -5<CR>
 
 
 "Sinipits
-autocmd FileType html,js,c,c++,java,javascript inoremap ,while while( zzx )<space>{<CR><CR><++><CR>}<++><Esc>?zzx<CR>cw
-autocmd FileType html,js,c,c++,java,javascript inoremap ,for for(zzx ; <++> ; <++>)<space>{<CR><CR><++><CR>}<++><Esc>?zzx<CR>cw
+" Common
+autocmd FileType html,js,c,cpp,java,javascript inoremap `if if( zzx )<space>{<CR><CR><++><CR>}<++><Esc>?zzx<CR>cw
+autocmd FileType html,js,c,cpp,java,javascript inoremap `elf else if( zzx ) {<CR><++><CR>}<CR><++><Esc>?zzx<CR>cw
+autocmd FileType html,js,c,cpp,java,javascript inoremap `while while( zzx )<space>{<CR><CR><++><CR>}<++><Esc>?zzx<CR>cw
+autocmd FileType html,js,c,cpp,java,javascript inoremap `for for(zzx ; <++> ; <++>)<space>{<CR><CR><++><CR>}<++><Esc>?zzx<CR>cw
+autocmd FileType html,js,c,cpp,java,javascript inoremap `ife if( zzx )<space>{<CR><CR><++><CR>}<CR><++>else {<CR><++><CR>}<CR><++><Esc>?zzx<CR>cw
+
+
 
 " HTML JAVASCRIPT
 autocmd FileType html,javascript inoremap `p <p zzx> <++> </p><CR><CR><++><Esc>?zzx<CR>cw
@@ -154,22 +160,52 @@ autocmd FileType html,javascript inoremap `head <head zzx> <++> </head><CR><CR><
 autocmd FileType html,javascript inoremap `body <body zzx> <++> </body><CR><CR><++><Esc>?zzx<CR>cw
 autocmd FileType html,javascript inoremap `title <title zzx> <++> </title><CR><CR><++><Esc>?zzx<CR>cw
 autocmd FileType html,javascript inoremap `lm (zzx)<space>=><space>{<space><++><space>}<space><++><Esc>?zzx<CR>cw
-autocmd FileType html,javascript inoremap `lg console.log(zzx);<CR><++><Esc>?zzx<CR>cw
+autocmd FileType html,javascript inoremap `p console.log(zzx);<CR><++><Esc>?zzx<CR>cw
 
 " MARKDOWN
-autocmd FileType markdown inoremap `lk [zzx](<++>)<space><++><Esc>?zzx<CR>cw
+autocmd FileType markdown inoremap `ln [zzx](<++>)<space><++><Esc>?zzx<CR>cw
 autocmd FileType markdown inoremap `md ![zzx](<++>)<space><++><Esc>?zzx<CR>cw
 
 " PYTHON
 autocmd FileType python inoremap `mn if __name__ == '__main__':<CR>
 autocmd FileType python inoremap `cpu device = torch.device('cpu')<CR>
 autocmd FileType python inoremap `torch <Esc>ggOimport torch<Esc><C-O>i
+autocmd FileType python inoremap `i input("zzx")<CR><++><Esc>?zzx<CR>cw
+autocmd FileType python inoremap `p print("zzx")<CR><++><Esc>?zzx<CR>cw
 autocmd FileType python inoremap `cv <Esc>ggOimport cv2 as cv<Esc><C-O>i
 autocmd FileType python inoremap `np <Esc>ggOimport numpy as np<Esc><C-O>i
+autocmd FileType python inoremap `while while zzx : <CR><++><CR><CR><backspace><++><Esc>?zzx<CR>cw
+autocmd FileType python inoremap `for for zzx in <++>:<CR><++><CR><CR><backspace><++><Esc>?zzx<CR>cw
 autocmd FileType python inoremap `nn <Esc>ggOimport torch.nn as nn<Esc><C-O>i
 autocmd FileType python inoremap `tqdm <Esc>ggOfrom tqdm import tqdm<Esc><C-O>i
 autocmd FileType python inoremap `rg for zzx in range(<++>):<CR><++><Esc>?zzx<CR>cw
+autocmd FileType python inoremap `pf print("zzx".format(<++>))<CR><++><Esc>?zzx<CR>cw
 autocmd FileType python inoremap `optim <Esc>ggOimport torch.optim as optim<Esc><C-O>i
 autocmd FileType python inoremap `plt <Esc>ggOimport matplotlib.pyplot as plt<Esc><C-O>i
 autocmd FileType python inoremap `gpu device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")<CR>
+autocmd FileType python inoremap `if if zzx :<CR><++><CR><CR><backspace><++><Esc>?zzx<CR>cw
+autocmd FileType python inoremap `ife if zzx :<CR><++><CR><CR><backspace><++><CR>else:<CR><++><CR><CR><backspace><++><Esc>?zzx<CR>cw
+autocmd FileType python inoremap `elf elif zzx :<CR><++><Esc>?zzx<CR>cw
 
+" C and CPP
+autocmd FileType c,cpp inoremap `pf fprintf(stdout,"zzx \n",<++>);<CR><++><Esc>?zzx<CR>cw
+autocmd FileType c,cpp inoremap `mn int main (int argc, char* argv[])<CR>{<CR>zzx<CR>}<Esc>?zzx<CR>cw
+
+" C
+autocmd FileType c inoremap `p fprintf(stdout,"zzx \n");<CR><++><Esc>?zzx<CR>cw
+
+" Cpp
+autocmd FileType cpp inoremap `i std::cin << zzx ;<CR><++><ESC>?zzx><CR>cw
+autocmd FileType cpp inoremap `p std::cout << "zzx" << "\n" ;<CR><++><Esc>?zzx<CR>cw
+autocmd FileType cpp inoremap `i std::cin << zzx ;<CR><++><ESC>?zzx><CR>cw
+
+" Java
+autocmd FileType java inoremap `mn public static void main(String[] args]<CR>{<CR>zzx<CR>}<Esc>?zzx<CR>cw
+
+" Bash
+autocmd FileType sh inoremap `fe for zzx in <++> <CR>do<CR><++><CR>done<CR><++><Esc>?zzx<CR>cw
+autocmd FileType sh inoremap `for for (( zzx; <++>; <++> ))<CR>do<CR><++><CR>done<CR><++><Esc>?zzx<CR>cw
+autocmd FileType sh inoremap `if if [ zzx ]<CR>then<CR><++><CR>fi<CR><++><Esc>?zzx<CR>cw
+autocmd FileType sh inoremap `ife if [ zzx ]<CR>then<CR><++><CR><++><CR>else<CR><++><CR>fi<CR><++><Esc>?zzx<CR>cw
+autocmd FileType sh inoremap `elf elif [ zzx ]<CR>then<CR><++><CR><++><Esc>?zzx<CR>cw
+autocmd FileType sh inoremap `while while zzx in <++> <CR>do<CR><++><CR>done<CR><++><Esc>?zzx<CR>cw
