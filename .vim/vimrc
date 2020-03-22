@@ -1,0 +1,175 @@
+set nocompatible              " be iMproved, required
+filetype off                  " required
+
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+" alternatively, pass a path where Vundle should install plugins
+"call vundle#begin('~/some/path/here')
+
+" let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim'
+" The following are examples of different formats supported.  " Keep Plugin commands between vundle#begin/end.
+" plugin on GitHub repo
+Plugin 'tpope/vim-fugitive'
+" plugin from http://vim-scripts.org/vim/scripts.html
+" Plugin 'L9'
+" Git plugin not hosted on GitHub
+Plugin 'git://git.wincent.com/command-t.git'
+" git repos on your local machine (i.e. when working on your own plugin)
+Plugin 'file:///home/gmarik/path/to/plugin'
+" The sparkup vim script is in a subdirectory of this repo called vim.
+" Pass the path to set the runtimepath properly.
+Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+Plugin 'rainglow/vim'
+Plugin 'mxw/vim-jsx'
+Plugin 'vimwiki/vimwiki'
+Plugin 'digitaltoad/vim-pug'
+Plugin 'lilydjwg/colorizer'
+
+
+
+" Install L9 and avoid a Naming conflict if you've already installed a
+" different version somewhere else.
+" Plugin 'ascenator/L9', {'name': 'newL9'}
+
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
+" To ignore plugin indent changes, instead use:
+"filetype plugin on
+"
+" Brief help
+" :PluginList       - lists configured plugins
+" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
+" :PluginSearch foo - searches for foo; append `!` to refresh local cache
+" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
+"
+" see :h vundle for more details or wiki for FAQ
+" Put your non-Plugin stuff after this line
+
+syntax on
+set enc=utf-8
+set fenc=utf-8
+set termencoding=utf-8
+set autoindent
+set relativenumber
+set number
+set numberwidth=5
+set so=10
+set ruler         " show the cursor position all the time
+set showcmd       " display incomplete commands
+set incsearch     " do incremental searching
+set hlsearch      " highlight matches
+set autowrite     " Automatically :write before running commands
+"set listchars=eol:⏎,tab:--,trail:.,extends:\#,nbsp:⎵
+
+
+colorscheme default
+highlight Comment cterm=bold
+
+
+set linespace=3
+set guifont=Fira\ Code:h12
+set tabstop=4
+set softtabstop=0 noexpandtab
+set shiftwidth=4
+set tabstop=7 softtabstop=0 expandtab shiftwidth=4 smarttab
+
+" Autocompletion
+set wildmode=longest,list,full
+
+"Netrw
+let g:netrw_banner = 0
+let g:netrw_liststyle = 3
+let g:netrw_browse_split = 4
+let g:netrw_altv = 1
+let g:netrw_winsize = 20
+nnoremap <C-A> :Vexplore<enter>
+
+
+"Airline
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#formatter = 'unique_tail'
+let g:airline_theme='random'
+
+"Finding Files
+set path+=**
+set wildmenu
+
+" Fix Splitling
+set splitbelow splitright
+
+" Use systm Clipboard
+ set clipboard+=unnameplus
+
+"VimWiki
+let g:vimwiki_list = [{'path': '~/vimwiki/',
+                      \ 'syntax': 'markdown', 'ext': '.md'}]
+
+" Enable spell checking, s for spell check
+map <leader>s :setlocal spell! spelllang=en_au<CR>
+
+" Vertically center document when entering insert mode
+autocmd InsertEnter * norm zz
+
+" Alias replace all to S
+nnoremap S :%s//gI<Left><Left><Left>
+
+" Remove trailing whitespace on save
+autocmd BufWritePre * %s/\s\+$//e
+
+" Guide navigation
+noremap <leader><Tab> <Esc>/<++><Enter>"_c4l
+inoremap <leader><Tab> <Esc>/<++><Enter>"_c4l
+vnoremap <leader><Tab> <Esc>/<++><Enter>"_c4l
+
+" general insert commands
+inoremap ;g <++>
+
+" Resizing
+noremap <C-J> :resize -5<CR>
+noremap <C-K> :resize +5<CR>
+noremap <C-H> :vertical resize +5<CR>
+noremap <C-L> :vertical resize -5<CR>
+
+
+"Sinipits
+autocmd FileType html,js,c,c++,java,javascript inoremap ,while while( zzx )<space>{<CR><CR><++><CR>}<++><Esc>?zzx<CR>cw
+autocmd FileType html,js,c,c++,java,javascript inoremap ,for for(zzx ; <++> ; <++>)<space>{<CR><CR><++><CR>}<++><Esc>?zzx<CR>cw
+
+" HTML JAVASCRIPT
+autocmd FileType html,javascript inoremap `p <p zzx> <++> </p><CR><CR><++><Esc>?zzx<CR>cw
+autocmd FileType html,javascript inoremap `h1 <h1 zzx> <++> </h1><CR><CR><++><Esc>?zzx<CR>cw
+autocmd FileType html,javascript inoremap `h2 <h2 zzx> <++> </h2><CR><CR><++><Esc>?zzx<CR>cw
+autocmd FileType html,javascript inoremap `h3 <h3 zzx> <++> </h3><CR><CR><++><Esc>?zzx<CR>cw
+autocmd FileType html,javascript inoremap `h4 <h4 zzx> <++> </h4><CR><CR><++><Esc>?zzx<CR>cw
+autocmd FileType html,javascript inoremap `h5 <h5 zzx> <++> </h5><CR><CR><++><Esc>?zzx<CR>cw
+autocmd FileType html,javascript inoremap `h6 <h6 zzx> <++> </h6><CR><CR><++><Esc>?zzx<CR>cw
+autocmd FileType html,javascript inoremap `div <div zzx>< CR></div><CR><CR><++><Esc>?zzx<CR>cw
+autocmd FileType html,javascript inoremap `img <img src="" alt="<++>"><CR><CR><++><Esc>?""<CR>li
+autocmd FileType html,javascript inoremap `head <head zzx> <++> </head><CR><CR><++><Esc>?zzx<CR>cw
+autocmd FileType html,javascript inoremap `body <body zzx> <++> </body><CR><CR><++><Esc>?zzx<CR>cw
+autocmd FileType html,javascript inoremap `title <title zzx> <++> </title><CR><CR><++><Esc>?zzx<CR>cw
+autocmd FileType html,javascript inoremap `lm (zzx)<space>=><space>{<space><++><space>}<space><++><Esc>?zzx<CR>cw
+autocmd FileType html,javascript inoremap `lg console.log(zzx);<CR><++><Esc>?zzx<CR>cw
+
+" MARKDOWN
+autocmd FileType markdown inoremap `lk [zzx](<++>)<space><++><Esc>?zzx<CR>cw
+autocmd FileType markdown inoremap `md ![zzx](<++>)<space><++><Esc>?zzx<CR>cw
+
+" PYTHON
+autocmd FileType python inoremap `mn if __name__ == '__main__':<CR>
+autocmd FileType python inoremap `cpu device = torch.device('cpu')<CR>
+autocmd FileType python inoremap `torch <Esc>ggOimport torch<Esc><C-O>i
+autocmd FileType python inoremap `cv <Esc>ggOimport cv2 as cv<Esc><C-O>i
+autocmd FileType python inoremap `np <Esc>ggOimport numpy as np<Esc><C-O>i
+autocmd FileType python inoremap `nn <Esc>ggOimport torch.nn as nn<Esc><C-O>i
+autocmd FileType python inoremap `tqdm <Esc>ggOfrom tqdm import tqdm<Esc><C-O>i
+autocmd FileType python inoremap `rg for zzx in range(<++>):<CR><++><Esc>?zzx<CR>cw
+autocmd FileType python inoremap `optim <Esc>ggOimport torch.optim as optim<Esc><C-O>i
+autocmd FileType python inoremap `plt <Esc>ggOimport matplotlib.pyplot as plt<Esc><C-O>i
+autocmd FileType python inoremap `gpu device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")<CR>
+
