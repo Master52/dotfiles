@@ -20,10 +20,10 @@ $HOME/.config/polybar/launch.sh &
 
 #Some ways to set your wallpaper besides variety or nitrogen
 feh --bg-scale ~/.config/bspwm/wall.png &
-pkill transmission-da 
+pkill transmission-da
 transmission-daemon &
 
-pkill megasync 
+pkill megasync
 megasync &
 
 #feh --randomize --bg-fill ~/Képek/*
@@ -45,7 +45,6 @@ run volumeicon &
 run chromium &
 run thunderbird &
 run telegram-desktop &
-xinput set-prop 11 308 1
 
 #nitrogen --restore &
 #run caffeine &

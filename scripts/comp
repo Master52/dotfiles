@@ -1,0 +1,16 @@
+#!/bin/sh
+# General handler for compiling files
+
+file=$(readlink -f "$1")
+base=$(echo "$file" | sed 's/\..*//')
+#bang=$(sed -n "1p" "$file")
+
+case "$1" in
+    *".js") npm $file ;;
+    *".py") python $file ;;
+    *".c") gcc $file -o $base ;;
+    *".cpp") gcc $file -o $base ;;
+    *".php") php -S "$file" ;;
+    *".sh") bash "$file" ;;
+    *) echo "Can't compile" ;;
+esac

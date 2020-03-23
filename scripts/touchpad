@@ -1,0 +1,7 @@
+#! /bin/bash
+
+id=$(xinput list | grep TouchPad | awk '{print $6}' | sed 's/id=//g')
+dev=$(xinput list-props 11 | grep -m1 "Tapping Enable" |  cut -d "(" -f2 | cut -d ")" -f1)
+
+xinput set-prop $id $dev 1
+
