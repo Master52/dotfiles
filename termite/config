@@ -2,14 +2,14 @@
 #https://github.com/thestinger/termite/blob/master/config
 allow_bold = true
 audible_bell = false
-browser = xdg-open
+browser = qutebrowser
 clickable_url = true
 cursor_blink = system
 cursor_shape = ibeam
 dynamic_title = true
 filter_unmatched_urls = true
 #font = Monospace 11
-font = Hack 11
+font = Hack 10
 geometry = 900x650
 highlight = 2f2f2f
 icon_name = terminal
@@ -53,7 +53,7 @@ background = rgba(40, 42, 54, 0.8)
 foreground      = #f8f8f2
 foreground_bold = #f8f8f2
 cursor          = #f8f8f2
-#background      = #282a36
+#background      = #282r36
 
 # black
 color0  = #000000

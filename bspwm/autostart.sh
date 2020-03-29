@@ -42,9 +42,6 @@ picom --config $HOME/.config/bspwm/picom.conf &
 /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 /usr/lib/xfce4/notifyd/xfce4-notifyd &
 run volumeicon &
-run chromium &
-run thunderbird &
-run telegram-desktop &
 
 #nitrogen --restore &
 #run caffeine &

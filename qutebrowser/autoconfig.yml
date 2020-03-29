@@ -6,5 +6,5 @@
 
 config_version: 2
 settings:
-  fonts.default_size:
-    global: 12pt
+  tabs.show:
+    global: switching
