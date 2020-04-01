@@ -1,0 +1,14 @@
+#! /bin/bash
+
+session=$(ls ~/dotfiles/vimsession/ | dmenu -l 10)
+echo $session
+if [ "$session" == "" ]
+then
+    exit
+else
+    termite -e "vim -S ~/dotfiles/vimsession/$session"
+
+fi
+
+
+

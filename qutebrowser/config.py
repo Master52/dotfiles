@@ -108,8 +108,24 @@ config.set('content.javascript.enabled', True, 'chrome://*/*')
 # Type: Bool
 config.set('content.javascript.enabled', True, 'qute://*/*')
 
-#Bindings
-config.bind('M','hint links spawn mpv {hint-url}')
-config.bind('x', "hint links spawn termite -e youtube-dl -f 'bestvideo=[ext=mp4]+bestaudio[ext=m4a]/bestvideo+bestaudio' --merge-output-format mp4 {hint-url}")
-config.bind('X', 'hint links spawn termite -e youtube-dl --extract-audio --audio-format mp3 {hint-url}')
+# List of user stylesheet filenames to use.
+# Type: List of File, or File
+c.content.user_stylesheets = 'my.css'
 
+# When to show the tab bar.
+# Type: String
+# Valid values:
+#   - always: Always show the tab bar.
+#   - never: Always hide the tab bar.
+#   - multiple: Hide the tab bar if only one tab is open.
+#   - switching: Show the tab bar when switching tabs.
+c.tabs.show = 'switching'
+
+# Default zoom level.
+# Type: Perc
+c.zoom.default = '90'
+
+# Bindings for normal mode
+config.bind('M', 'hint links spawn mpv {hint-url}')
+config.bind('X', 'hint links spawn termite -e youtube-dl --extract-audio --audio-format mp3 {hint-url}')
+config.bind('x', "hint links spawn termite -e youtube-dl -f 'bestvideo=[ext=mp4]+bestaudio[ext=m4a]/bestvideo+bestaudio' --merge-output-format mp4 {hint-url}")

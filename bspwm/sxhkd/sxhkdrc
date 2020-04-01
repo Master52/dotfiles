@@ -39,10 +39,10 @@ super + e
     code
 
 #Browser
-super + w
-	qutebrowser
+super + shift + w
+	chromium
 
-super+ shift + w
+super + w
     brave
 
 #Conky-toggle
@@ -189,6 +189,9 @@ alt + t
 alt + g
     gimp
 
+alt + o
+    ~/dotfiles/scripts/session
+
 
 
 
@@ -203,7 +206,7 @@ alt + g
 
 #Xcfe4-TaskManager
 ctrl + shift + q
-    bash compton-toggle.sh
+    ~/dotfiles/scripts/compton-toggle.sh
 
 
 #################################################################
