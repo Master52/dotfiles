@@ -58,7 +58,7 @@ bspc rule -a Gimp state=fullscreen
 
 #Floating applications
 bspc rule -a Arandr state=floating
-bspc rule -a mpv state=floating sticky=on
+bspc rule -a mpv state=floating
 #bspc rule -a Font-manager state=floating
 bspc rule -a Galculator state=floating
 bspc rule -a Gpick state=floating sticky=on

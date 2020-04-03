@@ -45,46 +45,50 @@ roundness = 2.0
 ############################################################
 
 [colors]
-# https://critical.ch/xterm/
-#dracula theme adapted by Erik Dubois
-background = rgba(40, 42, 54, 0.8)
+# Base16 Atelier Seaside
+# Author: Bram de Haan (http://atelierbramdehaan.nl)
 
-# special
-foreground      = #f8f8f2
-foreground_bold = #f8f8f2
-cursor          = #f8f8f2
-#background      = #282r36
+foreground      = #8ca68c
+foreground_bold = #cfe8cf
+cursor          = #cfe8cf
+background      = #131513
 
-# black
-color0  = #000000
-color8  = #79A9FF
+# 16 color space
 
-# red
-color1  = #ff5555
-color9  = #ff6e67
+# Black, Gray, Silver, White
+color0  = #131513
+color8  = #687d68
+color7  = #8ca68c
+color15 = #f4fbf4
 
-# green
-color2  = #50fa7b
-color10 = #5af78e
+# Red
+color1  = #e6193c
+color9  = #e6193c
 
-# yellow
-color3  = #f1fa8c
-color11 = #f4f99d
+# Green
+color2  = #29a329
+color10 = #29a329
 
-# blue
-color4  = #bd93f9
-color12 = #caa9fa
+# Yellow
+color3  = #98981b
+color11 = #98981b
 
-# magenta
-color5  = #ff79c6
-color13 = #ff92d0
+# Blue
+color4  = #3d62f5
+color12 = #3d62f5
 
-# cyan
-color6  = #8be9fd
-color14 = #9aedfe
+# Purple
+color5  = #ad2bee
+color13 = #ad2bee
 
-# white
-color7  = #bfbfbf
-color15 = #e6e6e6
+# Teal
+color6  = #1999b3
+color14 = #1999b3
 
-
+# Extra colors
+color16 = #87711d
+color17 = #e619c3
+color18 = #242924
+color19 = #5e6e5e
+color20 = #809980
+color21 = #cfe8cf
