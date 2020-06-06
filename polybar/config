@@ -40,8 +40,8 @@ format-offset =
 
 [colors]
 ; Nord theme ============
-background = #2F343F
-foreground = #f3f4f5
+background = #00F00
+foreground = #20B2AA
 alert = #d08770
 volume-min = #a3be8c
 volume-med = #ebcb8b
@@ -79,11 +79,11 @@ monitor = ${env:MONITOR}
 ;monitor-fallback = HDMI1
 width = 100%
 height = 30
-;offset-x = 1%
-;offset-y = 1%
-radius = 0.0
+#offset-x = 5%
+#offset-y = 3%
+radius = 0.5
 fixed-center = true
-bottom = false
+top = true
 separator = |
 
 background = ${colors.background}
@@ -118,9 +118,9 @@ font-1 = "FontAwesome:size=13;0"
 font-2 = "Noto Sans:size=10;0"
 font-3 = "Noto Sans Mono:size=10;0"
 
-modules-left = bspwm uptime
-modules-center = date
-modules-right = pavolume backlight temperature2 weather battery
+modules-left = bspwm xwindow
+;modules-center = date
+modules-right = pavolume backlight temperature2 date battery
 
 tray-detached = false
 tray-offset-x = 0
@@ -217,17 +217,29 @@ enable-scroll = true
 reverse-scroll = true
 pin-workspaces = true
 
-ws-icon-0 = 1;
-ws-icon-1 = 2;
-ws-icon-2 = 3;
-ws-icon-3 = 4;
-ws-icon-4 = 5;
-ws-icon-5 = 6;
-ws-icon-6 = 7;
-ws-icon-7 = 8;
-ws-icon-8 = 9;
-ws-icon-9 = 10;
+ws-icon-0 = 1;i
+ws-icon-1 = 2;ii
+ws-icon-2 = 3;iii
+ws-icon-3 = 4;iv
+ws-icon-4 = 5;v
+ws-icon-5 = 6;vi
+ws-icon-6 = 7;vii
+ws-icon-7 = 8;viii
+ws-icon-8 = 9;ix
+ws-icon-9 = 10;x
 ws-icon-default = " "
+
+#ws-icon-0 = 1;
+#ws-icon-1 = 2;
+#ws-icon-2 = 3;
+#ws-icon-3 = 4;
+#ws-icon-4 = 5;
+#ws-icon-5 = 6;
+#ws-icon-6 = 7;
+#ws-icon-7 = 8;
+#ws-icon-8 = 9;
+#ws-icon-9 = 10;
+#ws-icon-default = " "
 
 
 format = <label-state> <label-mode>
@@ -362,13 +374,13 @@ adapter = ACAD
 full-at = 100
 
 format-charging = <animation-charging> <label-charging>
-label-charging =  %percentage%%
+label-charging =  %percentage%%
 format-charging-foreground = ${colors.foreground}
 format-charging-background = ${colors.background}
 format-charging-underline = #a3c725
 
 format-discharging = <ramp-capacity> <label-discharging>
-label-discharging =  %percentage%%
+label-discharging =  %percentage%%
 format-discharging-underline = #c7ae25
 format-discharging-foreground = ${colors.foreground}
 format-discharging-background = ${colors.background}
@@ -505,7 +517,7 @@ date = " %Y-%m-%d%"
 date-alt = " %d-%m-%Y"
 time = %H:%M
 time-alt = %H:%M
-format-prefix = " "
+;format-prefix = " "
 format-prefix-foreground = #c1941a
 format-underline = #c1941a
 format-foreground = ${colors.foreground}
@@ -736,7 +748,7 @@ interval = 1
 ;   %mb_used%
 ;   %mb_free%
 ;   %mb_total%
-label = %gb_used%/%gb_free%
+label = %gb_used%/%gb_total%
 
 format = Mem <label>
 format-prefix = "  "
@@ -966,7 +978,7 @@ label = Uptime : %output%
 
 format-foreground = ${colors.foreground}
 format-background = ${colors.background}
-format-prefix = " "
+;format-prefix = " "
 format-prefix-foreground = #C15D3E
 format-underline = #C15D3E
 

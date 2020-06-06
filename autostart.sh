@@ -13,18 +13,18 @@ function run {
 #xrandr --output LVDS1 --mode 1366x768 --output DP3 --mode 1920x1080 --right-of LVDS1
 #xrandr --output HDMI2 --mode 1920x1080 --pos 1920x0 --rotate normal --output HDMI1 --primary --mode 1920x1080 --pos 0x0 --rotate normal --output VIRTUAL1 --off
 
-$HOME/.config/polybar/launch.sh &
 
 #change your keyboard if you need it
 #setxkbmap -layout be
 
 #Some ways to set your wallpaper besides variety or nitrogen
 feh --bg-fill ~/.config/bspwm/wall.png &
-pkill transmission-da
-transmission-daemon &
 
 pkill udiskie
 udiskie &
+
+pkill clipmenud
+clipmenud&
 
 pkill megasync
 megasync &
@@ -33,28 +33,23 @@ megasync &
 #feh --randomize --bg-fill ~/Dropbox/Apps/Desktoppr/*
 
 xsetroot -cursor_name left_ptr &
-run sxhkd -c ~/.config/bspwm/sxhkd/sxhkdrc &
 
 #run variety &
 run nm-applet &
-run pamac-tray &
-run xfce4-power-manager &
+pamac-tray &
+xfce4-power-manager &
 numlockx on &
-blueberry-tray &
-compton --config $HOME/.config/bspwm/compton.conf &
+run blueberry-tray &
+#compton --config $HOME/.config/bspwm/compton.conf &
 /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 /usr/lib/xfce4/notifyd/xfce4-notifyd &
 run volumeicon &
 
 
 
-#nitrogen --restore &
-#run caffeine &
-#run vivaldi-stable &
-#run firefox &
-#run thunar &
-#run dropbox &
-#run insync start &
-#run discord &
-#run spotify &
-#run atom &
+while true
+do
+    xsetroot -name "MASTER | $(upower -i $(upower -e | grep 'BAT') | grep -E 'percentage' | awk  '{print $2}') | $(date '+%A %d %B %Y %T')"
+    sleep 1
+done&
+

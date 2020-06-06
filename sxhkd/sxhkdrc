@@ -1,0 +1,201 @@
+#################################################################
+# KEYBOARD BINDINGS FOR ANY TWM
+#################################################################
+
+#################################################################
+# SUPER + FUNCTION KEYS
+#################################################################
+
+
+
+#Meld
+#super + F5
+#    meld
+
+
+
+#################################################################
+# SUPER + ... KEYS
+#################################################################
+
+#Code
+super + e
+    code
+
+#Browser
+alt + shift + w
+    brave
+
+alt + w
+    qutebrowser
+
+alt + c
+     alacritty -e "ipython"
+
+
+alt + x
+    ~/dotfiles/scripts/lock
+
+
+alt +  Return
+     alacritty
+
+super +  Return
+     alacritty
+
+#Xkill
+super + Escape
+    xkill
+
+
+#File-Manager
+alt + r
+     alacritty -e "ranger"
+
+#################################################################
+# SUPER + SHIFT KEYS
+#################################################################
+
+
+#Keyboard dependent
+#Filoptirune-Manager
+#super + shift + KP_Enter
+#	thunar
+
+#dmenu
+alt + d
+	dmenu_run -i
+
+
+#reload sxhkd:
+alt + shift + s
+	pkill -USR1 -x sxhkd
+
+#Keyboard dependent
+#super + shift + KP_Enter
+#	thunar
+
+
+#################################################################
+# CONTROL + ALT KEYS
+#################################################################
+
+#Xfce4-settings-manager
+#ctrl + alt + m
+#     xfce4-settings-manager
+
+
+#################################################################
+# ALT + ... KEYS
+#################################################################
+#
+
+super + i
+     alacritty -e "htop"
+
+super + r
+    thunar
+
+super + s
+    ~/dotfiles/scripts/socialApp
+
+super + shift + m
+    ~/dotfiles/scripts/ramdan
+
+super + o
+    ~/dotfiles/scripts/session
+
+super + p
+    ~/dotfiles/scripts/PasswordCopy
+
+
+
+
+
+#################################################################
+#ALT + SHIFT KEYS
+#################################################################
+#
+
+#################################################################
+# CONTROL + SHIFT KEYS
+#################################################################
+
+#Xcfe4-TaskManager
+#ctrl + shift + q
+#    ~/dotfiles/scripts/compton-toggle.sh
+#
+
+#################################################################
+#     SCREENSHOTS
+#################################################################
+
+#Scrot
+Print
+     xfce4-screenshooter
+
+
+#################################################################
+#     FUNCTION KEYS
+#################################################################
+
+#xfce4-terminal dropdown
+#F12
+#    xfce4-terminal --drop-down
+
+
+#################################################################
+#     MULTIMEDIA KEYS
+#################################################################
+
+#Raises volume
+XF86AudioRaiseVolume
+    amixer set Master 10%+
+
+#Lowers volume
+XF86AudioLowerVolume
+    amixer set Master 10%-
+
+#Mute
+XF86AudioMute
+    amixer -D pulse set Master 1+ toggle
+
+#Playerctl works for Pragha, Spotify and others
+#Delete the line for playerctl if you want to use mpc
+#and replace it with the corresponding code
+#mpc works for e.g.ncmpcpp
+#mpc toggle
+#mpc next
+#mpc prev
+#mpc stop
+
+#PLAY
+XF86AudioPlay
+    playerctl play-pause
+
+#Next
+XF86AudioNext
+    playerctl next
+
+#previous
+XF86AudioPrev
+    playerctl previous
+
+#Stop
+XF86AudioStop
+    playerctl stop
+
+#Brightness up
+XF86MonBrightnessUp
+    xbacklight -inc 10
+
+#Brightness down
+XF86MonBrightnessDown
+    xbacklight -dec 10
+
+
+
+super + shift + BackSpace
+                ~/dotfiles/scripts/leave
+
+

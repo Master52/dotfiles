@@ -1,0 +1,17 @@
+#! /bin/bash
+fp=$(printf "zsh\ndwm\nst\ndmenu\ntmux\nvim\ncompton\nranger\nbash\nautostart\nqutebrowser" | dmenu -l 5 )
+
+case $fp in
+     zsh) st -e vim ~/.zshrc ;;
+     dwm) st -e vim ~/dwm/config.h ;;
+     st) st -e vim ~/st/config.h ;;
+     dmenu) st -e vim ~/dmenu/config.h ;;
+     compton) st -e vim ~/.config/bspwm/compton.conf ;;
+     ranger) st -e vim ~/.config/ranger/rc.conf ;;
+     bash) st -e vim ~/.bashrc ;;
+     autostart) st -e vim ~/dotfiles/autostart.sh ;;
+     tmux) st -e vim ~/tmux.conf ;;
+     vim) st -e vim ~/.vim/vimrc ;;
+     qutebrowser) st -e vim ~/.config/qutebrowser/config.py ;;
+      *) echo "No Match Found" ;;
+  esac

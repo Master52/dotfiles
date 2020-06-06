@@ -9,25 +9,9 @@
 
 
 #Meld
-super + F5
-    meld
+#super + F5
+#    meld
 
-#Vlc
-super + F6
-    vlc --video-on-top
-
-
-#Thunar
-super + F8
-    thunar
-
-#Evolution
-super + F9
-    evolution
-
-#Spotify
-super + F10
-    spotify
 
 
 #################################################################
@@ -40,31 +24,27 @@ super + e
 
 #Browser
 super + shift + w
-	chromium
-
-super + w
     brave
 
-#Conky-toggle
+super + w
+    qutebrowser
+
 super + c
-    termite -e "python"
+     alacritty -e "ipython"
 
 
 #Oblogout
 super + x
-    oblogout
+    ~/dotfiles/scripts/lock
 
 
 #Pavucontrol
 super + v
     pavucontrol
 
-super + m
-    thunderbird
-
 #Termite
 super + Return
-    termite
+     alacritty
 
 #Xkill
 super + Escape
@@ -73,7 +53,7 @@ super + Escape
 
 #File-Manager
 super + r
-	termite -e "ranger"
+     alacritty -e "ranger"
 
 #################################################################
 # SUPER + SHIFT KEYS
@@ -81,16 +61,14 @@ super + r
 
 
 #Keyboard dependent
-#File-Manager
+#Filoptirune-Manager
 #super + shift + KP_Enter
 #	thunar
 
 #dmenu
 super + d
-	dmenu_run -i -nb '#191919' -nf '#fea63c' -sb '#fea63c' -sf '#191919' -fn 'NotoMonoRegular:bold:pixelsize=14'
+	dmenu_run -i
 
-super + t
-	telegram-desktop
 
 #reload sxhkd:
 super + shift + s
@@ -105,62 +83,9 @@ super + shift + s
 # CONTROL + ALT KEYS
 #################################################################
 
-#conky-rotate
-ctrl + alt + Next
-     conky-rotate -n
-
-#conky-rotate
-ctrl + alt + Prior
-    conky-rotate -p
-
-#File-Manager
-ctrl + alt + b
-     thunar
-
-#Catfish
-ctrl + alt + c
-     catfish
-
-
-#Evolution
-ctrl + alt + e
-     evolution
-
-
-#Pamac-manager
-ctrl + alt + p
-    pamac-manager
-
 #Xfce4-settings-manager
-ctrl + alt + m
-     xfce4-settings-manager
-
-#Pulse Audio Control
-ctrl + alt + u
-     pavucontrol
-
-#Spotify
-ctrl + alt + s
-   spotify
-
-#Termite
-ctrl + alt + Return
-    termite
-
-#termite
-ctrl + alt + t
-    termite
-
-
-#Xfce4-appfinder
-ctrl + alt + a
-    xfce4-appfinder
-
-
-#Keyboard dependent
-#termite
-#ctrl + alt + KP_Enter
-#     termite
+#ctrl + alt + m
+#     xfce4-settings-manager
 
 
 #################################################################
@@ -169,28 +94,23 @@ ctrl + alt + a
 #
 
 alt + i
-    termite -e "htop"
-
-alt + i
-    termite -e "gtop"
+     alacritty -e "htop"
 
 alt + r
     thunar
 
-alt + shift + r
-    termite -e "rtv"
+alt + s
+    ~/dotfiles/scripts/socialApp
 
-alt + w
-    firefox
-
-alt + t
-    termite -e "transmission-remote-cli"
-
-alt + g
-    gimp
+alt + shift + m
+    ~/dotfiles/scripts/ramdan
 
 alt + o
     ~/dotfiles/scripts/session
+
+alt + p
+    ~/dotfiles/scripts/PasswordCopy
+
 
 
 
@@ -205,9 +125,9 @@ alt + o
 #################################################################
 
 #Xcfe4-TaskManager
-ctrl + shift + q
-    ~/dotfiles/scripts/compton-toggle.sh
-
+#ctrl + shift + q
+#    ~/dotfiles/scripts/compton-toggle.sh
+#
 
 #################################################################
 #     SCREENSHOTS
@@ -217,19 +137,14 @@ ctrl + shift + q
 Print
      xfce4-screenshooter
 
-#screeenshooter
-ctrl + Print
-    scrot 'ArcoLinux-%Y-%m-%d-%s_screenshot_$wx$h.jpg' -e 'mv $f $$(xdg-user-dir PICTURES)'
-
-
 
 #################################################################
 #     FUNCTION KEYS
 #################################################################
 
 #xfce4-terminal dropdown
-F12
-    xfce4-terminal --drop-down
+#F12
+#    xfce4-terminal --drop-down
 
 
 #################################################################
@@ -281,14 +196,6 @@ XF86MonBrightnessUp
 XF86MonBrightnessDown
     xbacklight -dec 10
 
-#########################
-#        POLYBAR        #
-#########################
-
-#Hide polybar
-#super + y
-#    polybar-msg cmd toggle
-#
 #################################################################
 #################################################################
 ##################   DESKTOP SPECIFIC    ########################
@@ -299,9 +206,6 @@ XF86MonBrightnessDown
 # CTRL + ALT KEYS
 #################################################################
 
-#Compton Toggle
-ctrl + alt + o
-    ~/.config/bspwm/scripts/compton-toggle.sh
 
 #################################################################
 # SUPER + KEYS
@@ -337,6 +241,9 @@ super + space
 # Move focus to other monitor
 super + BackSpace
 		bspc monitor -f next
+
+super + shift + BackSpace
+                ~/dotfiles/scripts/leave
 
 #################################################################
 # SUPER + ALT KEYS

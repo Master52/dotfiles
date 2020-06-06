@@ -1,0 +1,20 @@
+#! /bin/sh
+
+
+op=$(printf "Shutdown\nReboot\nHibernate\nSleep\nLogout\n" | dmenu -i )
+
+case $op in
+     Shutdown)
+          poweroff ;;
+     Reboot)
+         reboot;;
+     Hibernate)
+         systemctl suspend-then-hibernate;;
+     Sleep)
+         systemctl suspend ;;
+     Logout)
+         pkill -u master;;
+
+      *) echo "Invalid Input" ;;
+esac
+

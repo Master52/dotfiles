@@ -167,7 +167,14 @@ c.url.open_base_url = True
 # the search engine name to the search term, e.g.  `:open google
 # qutebrowser`.
 # Type: Dict
-c.url.searchengines = {'DEFAULT': 'https://www.google.co.in/search?q={}', 'yt': 'https://www.youtube.com/results?search_query={}', 'mat': 'https://material-ui.com/api/{}', 'a': 'https://www.amazon.in/s?k={}', 'ddg': 'https://duckduckgo.com/?q={}&ia=web', 'wiki': 'https://en.wikipedia.org/wiki/{}','arch': 'https://wiki.archlinux.org/index.php/{}'}
+c.url.searchengines = {
+                        'DEFAULT': 'https://www.google.co.in/search?q={}',
+                        'yt': 'https://www.youtube.com/results?search_query={}',
+                        'mat':'https://material-ui.com/api/{}',
+                        'a':'https://www.amazon.in/s?k={}',
+                        'ddg':'https://duckduckgo.com/?q={}&ia=web',
+                        'wiki':'https://en.wikipedia.org/wiki/{}',
+                      }
 
 # Page(s) to open at the start.
 # Type: List of FuzzyUrl, or FuzzyUrl
@@ -177,14 +184,8 @@ c.url.start_pages = 'www.bing.com'
 # Type: Perc
 c.zoom.default = '90'
 
-# Default font families to use. Whenever "default_family" is used in a
-# font setting, it's replaced with the fonts listed here. If set to an
-# empty value, a system-specific monospace default is used.
-# Type: List of Font, or Font
-c.fonts.default_family = 'FanstasqueSansMono'
-
 # Bindings for normal mode
 config.bind('M', 'hint links spawn mpv {hint-url}')
-config.bind('X', 'hint links spawn st -e youtube-dl -o ~/Music/%(title)s.%(ext)s --extract-audio --audio-format mp3 {hint-url}')
-config.bind('x', "hint links spawn st -e youtube-dl -o ~/Videos/%(title)s.%(ext)s -f 'bestvideo=[ext=mp4]+bestaudio[ext=m4a]/bestvideo+bestaudio' --merge-output-format mp4 {hint-url}")
-config.bind('z', 'spawn st -e wget -P /home/master/Downloads  -c {url}')
+config.bind('X', 'hint links spawn alacritty -e youtube-dl -o ~/Music/%(title)s.%(ext)s --extract-audio --audio-format mp3 {hint-url}')
+config.bind('x', "hint links spawn alacritty -e youtube-dl -o ~/Videos/%(title)s.%(ext)s -f 'bestvideo=[ext=mp4]+bestaudio[ext=m4a]/bestvideo+bestaudio' --merge-output-format mp4 {hint-url}")
+config.bind('z', 'spawn alacritty -e wget -P /home/master/Downloads  -c {url}')

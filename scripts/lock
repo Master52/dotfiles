@@ -1,0 +1,4 @@
+#! /bin/sh
+
+betterlockscreen -s -l dimblur -t "Ye Scheme Tere liye Nahi Hai"
+

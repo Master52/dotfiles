@@ -1,0 +1,12 @@
+#!/bin/bash
+
+counter=1
+read initial
+clear
+
+for i in $(ls)
+do
+    echo $initial$i$counter.jpg
+    counter=$[counter +1]
+done
+

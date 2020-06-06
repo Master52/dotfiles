@@ -1,0 +1,22 @@
+#!/bin/bash
+
+play() {
+     while read f
+     do
+         if [ "$f" == "WAIT" ]
+         then
+             response=$(printf "yes\nno" | dmenu -p "play Next" -l 5 -i )
+             echo $response
+             if [ "$response" != "yes" ]
+             then
+                 exit; else
+                 continue;
+             fi
+         else
+             ffplay  -autoexit -showmode 1 -- "$f";
+         fi
+     done
+}
+
+playlist=$( ls ~/Music/Ramdan/playlist | dmenu -l 5 -i )
+cat ~/Music/Ramdan/playlist/"$playlist" | play

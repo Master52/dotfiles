@@ -9,7 +9,7 @@ cursor_shape = ibeam
 dynamic_title = true
 filter_unmatched_urls = true
 #font = Monospace 11
-font = Hack 10
+font = Fira Code 10
 geometry = 900x650
 highlight = 2f2f2f
 icon_name = terminal
@@ -37,58 +37,57 @@ roundness = 2.0
 #### You can change the color coding to your liking
 #### There is a folder themes in ~/config/termite/themes
 #### Copy/paste the colors from one of the 79+ templates to this one
-#### A backup of the original config termite is present
-############################################################
+#### A backup of the original config termite is present ############################################################
 #### Use websites to make the terminal your own
 #### https://terminal.sexy
 #### https://critical.ch/xterm/
 ############################################################
 
 [colors]
-# Base16 Atelier Seaside
-# Author: Bram de Haan (http://atelierbramdehaan.nl)
+# Base16 IR Black
+# Author: Timothée Poisot (http://timotheepoisot.fr)
 
-foreground      = #8ca68c
-foreground_bold = #cfe8cf
-cursor          = #cfe8cf
-background      = #131513
+foreground      = #b5b3aa
+foreground_bold = #d9d7cc
+cursor          = #d9d7cc
+background      = #000000
 
 # 16 color space
 
 # Black, Gray, Silver, White
-color0  = #131513
-color8  = #687d68
-color7  = #8ca68c
-color15 = #f4fbf4
+color0  = #000000
+color8  = #6c6c66
+color7  = #b5b3aa
+color15 = #fdfbee
 
 # Red
-color1  = #e6193c
-color9  = #e6193c
+color1  = #ff6c60
+color9  = #ff6c60
 
 # Green
-color2  = #29a329
-color10 = #29a329
+color2  = #a8ff60
+color10 = #a8ff60
 
 # Yellow
-color3  = #98981b
-color11 = #98981b
+color3  = #ffffb6
+color11 = #ffffb6
 
 # Blue
-color4  = #3d62f5
-color12 = #3d62f5
+color4  = #96cbfe
+color12 = #96cbfe
 
 # Purple
-color5  = #ad2bee
-color13 = #ad2bee
+color5  = #ff73fd
+color13 = #ff73fd
 
 # Teal
-color6  = #1999b3
-color14 = #1999b3
+color6  = #c6c5fe
+color14 = #c6c5fe
 
 # Extra colors
-color16 = #87711d
-color17 = #e619c3
-color18 = #242924
-color19 = #5e6e5e
-color20 = #809980
-color21 = #cfe8cf
+color16 = #e9c062
+color17 = #b18a3d
+color18 = #242422
+color19 = #484844
+color20 = #918f88
+color21 = #d9d7cc
