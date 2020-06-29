@@ -167,11 +167,11 @@ c.url.open_base_url = True
 # the search engine name to the search term, e.g.  `:open google
 # qutebrowser`.
 # Type: Dict
-c.url.searchengines = {'DEFAULT': 'https://www.google.co.in/search?q={}', 'yt': 'https://www.youtube.com/results?search_query={}', 'mat': 'https://material-ui.com/api/{}', 'a': 'https://www.amazon.in/s?k={}', 'ddg': 'https://duckduckgo.com/?q={}&ia=web', 'wiki': 'https://en.wikipedia.org/wiki/{}','arch': 'https://wiki.archlinux.org/index.php/{}'}
+c.url.searchengines = {'DEFAULT': 'https://google.com/search?q={}', 'yt': 'https://www.youtube.com/results?search_query={}', 'mat': 'https://material-ui.com/api/{}', 'a': 'https://www.amazon.in/s?k={}', 'ddg': 'https://duckduckgo.com/?q={}&ia=web', 'wiki': 'https://en.wikipedia.org/wiki/{}','arch': 'https://wiki.archlinux.org/index.php/{}'}
 
 # Page(s) to open at the start.
 # Type: List of FuzzyUrl, or FuzzyUrl
-c.url.start_pages = 'www.bing.com'
+c.url.start_pages = 'https://bing.com/'
 
 # Default zoom level.
 # Type: Perc

@@ -1,0 +1,26 @@
+#! /bin/bash
+
+capwindow() {
+    notify-send.sh "Starting Screen Recording"
+    windowDetail=$(xwininfo | grep 'Absolute\|Width\|Height')
+    X=$(awk -F: '/X/{print $2}' <<< "$windowDetail" | sed -e "s/\ //g")
+    Y=$(awk -F: '/Y/{print $2}' <<< "$windowDetail" | sed -e "s/\ //g")
+    w=$(awk -F: '/Width/{print $2}' <<< "$windowDetail" | sed -e "s/\ //g")
+    h=$(awk -F: '/Height/{print $2}' <<< "$windowDetail" | sed -e "s/\ //g")
+    ffmpeg -f x11grab -r 30 -s $w\x$h -i :0.0+$X,$Y -f pulse -ac 2 -i 0 ~/Videos/Recordings/$(date "+%Y-%T").mkv
+}
+
+capScreen() {
+    notify-send.sh "Starting Screen Recording"
+    ffmpeg -video_size 1366x768 -framerate 25  -f x11grab -i :0.0 -f pulse -ac 2 -i 0 ~/Videos/Recordings/$(date "+%Y-%T").mkv
+}
+
+pkill ffmpeg || (
+op=$(printf "screen\nwindow" | dmenu -i)
+case $op in
+     screen) capScreen ;;
+     window)  notify-send.sh "Select the target window"
+              capwindow ;;
+      *) echo "No Match Found" ;;
+  esac
+)

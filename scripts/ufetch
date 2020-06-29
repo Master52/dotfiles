@@ -6,7 +6,7 @@
 
 # user is already defined
 host="$(cat /etc/hostname)"
-os='Arch Linux'
+os='MASTER LINUX'
 kernel="$(uname -sr)"
 uptime="$(uptime -p | sed 's/up //')"
 packages="$(pacman -Q | wc -l)"
@@ -54,10 +54,10 @@ if [ -x "$(command -v tput)" ]; then
 fi
 
 # you can change these
-lc="${reset}${bold}${black}"         # labels
-nc="${reset}${bold}${black}"         # user and hostname
+lc="${reset}${bold}${yellow}"         # labels
+nc="${reset}${bold}${yellow}"         # user and hostname
 ic="${reset}"                       # info
-c0="${reset}${white}"                # first color
+c0="${reset}${yellow}"                # first color
 
 ## OUTPUT
 

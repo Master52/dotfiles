@@ -36,6 +36,7 @@ xsetroot -cursor_name left_ptr &
 
 #run variety &
 run nm-applet &
+run hp-systray &
 pamac-tray &
 xfce4-power-manager &
 numlockx on &
