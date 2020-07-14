@@ -9,7 +9,7 @@ case $op in
      Reboot)
          reboot;;
      Hibernate)
-         systemctl suspend-then-hibernate;;
+         systemctl suspend-then-hibernate ;;
      Sleep)
          systemctl suspend ;;
      Logout)
