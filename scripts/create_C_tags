@@ -7,6 +7,6 @@ gcc -M "$@" `xml2-config --cflags` `xml2-config --libs` | sed -e 's/[\\ ]/\n/g' 
                 ctags -L - --c++-kinds=+p --fields=+iaS --extra=+q
 
 ## For extra header files
-gcc -M -I ~/include "$@" | sed -e 's/[\\ ]/\n/g' | \
-            sed -e '/^$/d' -e '/\.o:[ \t]*$/d' | \
-                    ctags -L - --c++-kinds=+p --fields=+iaS --extra=+q
+#gcc -M -I ~/include "$@" | sed -e 's/[\\ ]/\n/g' | \
+#            sed -e '/^$/d' -e '/\.o:[ \t]*$/d' | \
+#                    ctags -L - --c++-kinds=+p --fields=+iaS --extra=+q
