@@ -26,8 +26,6 @@ udiskie &
 pkill clipmenud
 clipmenud&
 
-pkill megasync
-megasync &
 
 #feh --randomize --bg-fill ~/Képek/*
 #feh --randomize --bg-fill ~/Dropbox/Apps/Desktoppr/*

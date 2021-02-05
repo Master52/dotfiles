@@ -40,8 +40,8 @@ format-offset =
 
 [colors]
 ; Nord theme ============
-background = #00F00
-foreground = #20B2AA
+background = #020001
+foreground = #ffffe4
 alert = #d08770
 volume-min = #a3be8c
 volume-med = #ebcb8b
@@ -79,10 +79,9 @@ monitor = ${env:MONITOR}
 ;monitor-fallback = HDMI1
 width = 100%
 height = 30
-#offset-x = 5%
-#offset-y = 3%
-radius = 0.5
-fixed-center = true
+offset-x = 0
+offset-y = 0
+radius = 0.5 fixed-center = true
 top = true
 separator = |
 
@@ -113,14 +112,14 @@ module-margin-left = 3
 module-margin-right = 3
 
 ;https://github.com/jaagr/polybar/wiki/Fonts
-font-0 = "Noto Sans:size=8;0"
-font-1 = "FontAwesome:size=13;0"
-font-2 = "Noto Sans:size=10;0"
-font-3 = "Noto Sans Mono:size=10;0"
+font-0 = "Fira-Code:size=8;1"
+font-1 = "Font Awesome 5 Free Regular:size=9;1"
+font-2 = "Font Awesome 5 Free Solid:size=9;1"
+font-3 = "Font Awesome 5 Free Brands Regular:size=9;1"
 
 modules-left = bspwm xwindow
 ;modules-center = date
-modules-right = pavolume backlight temperature2 date battery
+modules-right = spotify1 volume backlight temperature2 date battery
 
 tray-detached = false
 tray-offset-x = 0
@@ -217,29 +216,29 @@ enable-scroll = true
 reverse-scroll = true
 pin-workspaces = true
 
-ws-icon-0 = 1;i
-ws-icon-1 = 2;ii
-ws-icon-2 = 3;iii
-ws-icon-3 = 4;iv
-ws-icon-4 = 5;v
-ws-icon-5 = 6;vi
-ws-icon-6 = 7;vii
-ws-icon-7 = 8;viii
-ws-icon-8 = 9;ix
-ws-icon-9 = 10;x
-ws-icon-default = " "
-
-#ws-icon-0 = 1;
-#ws-icon-1 = 2;
-#ws-icon-2 = 3;
-#ws-icon-3 = 4;
-#ws-icon-4 = 5;
-#ws-icon-5 = 6;
-#ws-icon-6 = 7;
-#ws-icon-7 = 8;
-#ws-icon-8 = 9;
-#ws-icon-9 = 10;
+#ws-icon-0 = 1;1
+#ws-icon-1 = 2;2
+#ws-icon-2 = 3;3
+#ws-icon-3 = 4;4
+#ws-icon-4 = 5;5
+#ws-icon-5 = 6;6
+#ws-icon-6 = 7;7
+#ws-icon-7 = 8;8
+#ws-icon-8 = 9;9
+#ws-icon-9 = 10;10
 #ws-icon-default = " "
+
+ws-icon-0 = 1;
+ws-icon-1 = 2;
+ws-icon-2 = 3;
+ws-icon-3 = 4;
+ws-icon-4 = 5;
+ws-icon-5 = 6;
+ws-icon-6 = 7;
+ws-icon-7 = 8;
+ws-icon-8 = 9;
+ws-icon-9 = 10;
+ws-icon-default = " "
 
 
 format = <label-state> <label-mode>
@@ -343,7 +342,7 @@ card = intel_backlight
 ;   <label> (default)
 ;   <ramp>
 ;   <bar>
-format = <label>
+format = <ramp>
 format-foreground = ${colors.foreground}
 format-background = ${colors.background}
 

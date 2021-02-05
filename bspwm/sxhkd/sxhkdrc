@@ -27,10 +27,10 @@ super + shift + w
     brave
 
 super + w
-    qutebrowser
+    librewolf
 
 super + c
-     alacritty -e "ipython"
+    env LC_ALL=en_US.UTF-8 clipmenu
 
 
 #Oblogout
@@ -42,9 +42,10 @@ super + x
 super + v
     pavucontrol
 
-#Termite
+
+#GPU Alacritty
 super + Return
-     alacritty
+     prime-run alacritty
 
 #Xkill
 super + Escape
@@ -67,8 +68,7 @@ super + r
 
 #dmenu
 super + d
-	dmenu_run -i
-
+    env LC_ALL=en_US.UTF-8 dmenu_run
 
 #reload sxhkd:
 super + shift + s
@@ -94,7 +94,7 @@ super + shift + s
 #
 
 alt + i
-     alacritty -e "htop"
+     prime-run alacritty -e "htop"
 
 alt + r
     thunar
@@ -353,7 +353,7 @@ alt + space
 
 # Expand tiled space
 super + shift + {h,j,k,l}
-	bspc node {@west -r -10,@south -r +10,@north -r -10,@east -r +10}}
+	bspc node {@west -r -20,@south -r +20,@north -r -20,@east -r +20}
 
 #################################################################
 # CTRL + ALT KEYS

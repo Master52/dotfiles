@@ -1,4 +1,4 @@
 #! /bin/sh
 
-betterlockscreen -s -l dimblur -t "Ye Scheme Tere liye Nahi Hai"
+betterlockscreen -u $HOME/.config/wall.png -s -l dimblur -t "Ye Scheme Tere liye Nahi Hai"
 

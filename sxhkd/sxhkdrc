@@ -27,7 +27,7 @@ alt + shift + w
     brave
 
 alt + w
-    qutebrowser
+    firefox
 
 alt + c
      alacritty -e "ipython"
@@ -38,7 +38,7 @@ alt + x
 
 
 alt +  Return
-     alacritty
+     prime-run alacritty
 
 super +  Return
      alacritty

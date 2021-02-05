@@ -13,38 +13,34 @@ function run {
 #xrandr --output LVDS1 --mode 1366x768 --output DP3 --mode 1920x1080 --right-of LVDS1
 #xrandr --output HDMI2 --mode 1920x1080 --pos 1920x0 --rotate normal --output HDMI1 --primary --mode 1920x1080 --pos 0x0 --rotate normal --output VIRTUAL1 --off
 
-$HOME/.config/polybar/launch.sh &
 
 #change your keyboard if you need it
 #setxkbmap -layout be
 
 #Some ways to set your wallpaper besides variety or nitrogen
-feh --bg-fill ~/.config/bspwm/wall.png &
-pkill transmission-da
-transmission-daemon &
+feh --bg-fill ~/.config/wall.png &
+#pkill transmission-da
+#transmission-daemon &
 
-pkill udiskie
-udiskie &
+#pkill udiskie
+#udiskie &
 
-pkill megasync
-megasync &
 
 #feh --randomize --bg-fill ~/Képek/*
 #feh --randomize --bg-fill ~/Dropbox/Apps/Desktoppr/*
 
 xsetroot -cursor_name left_ptr &
-run sxhkd -c ~/.config/bspwm/sxhkd/sxhkdrc &
 
 #run variety &
 run nm-applet &
+run clipmenud &
 run pamac-tray &
 run xfce4-power-manager &
+run sxhkd -c ~/.config/bspwm/sxhkd/sxhkdrc &
+env LC_ALL=en_US.UTF-8 $HOME/.config/polybar/launch.sh
 numlockx on &
-blueberry-tray &
-compton --config $HOME/.config/bspwm/compton.conf &
-/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
-/usr/lib/xfce4/notifyd/xfce4-notifyd &
-run volumeicon &
+run blueberry-tray &
+picom &
 
 
 

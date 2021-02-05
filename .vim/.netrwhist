@@ -1,12 +1,12 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =0
+let g:netrw_dirhistcnt =4
+let g:netrw_dirhist_4='/home/master/dotfiles'
+let g:netrw_dirhist_3='/home/master/.config'
+let g:netrw_dirhist_2='/home/master/.config/nvim'
+let g:netrw_dirhist_1='/home/master/Royal/src'
 let g:netrw_dirhist_0='/home/master/Royal-Furniture/server'
 let g:netrw_dirhist_9='/home/master/Royal-Furniture/server/src'
 let g:netrw_dirhist_8='/home/master/Royal-Furniture/server'
 let g:netrw_dirhist_7='/home/master/Royal-Furniture/server/include'
 let g:netrw_dirhist_6='/home/master/Royal-Furniture/server/build'
 let g:netrw_dirhist_5='/home/master/Royal-Furniture/server/build/lib'
-let g:netrw_dirhist_4='/home/master/Royal-Furniture/server/src'
-let g:netrw_dirhist_3='/home/master/Royal-Furniture/server'
-let g:netrw_dirhist_2='/usr/include/parted'
-let g:netrw_dirhist_1='/home/master'
