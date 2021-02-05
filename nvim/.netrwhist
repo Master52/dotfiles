@@ -1,0 +1,12 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =0
+let g:netrw_dirhist_0='/home/master/Code/noorani_solution/nms/build/assets'
+let g:netrw_dirhist_9='/home/master/Code/noorani_solution/nms/build'
+let g:netrw_dirhist_8='/home/master/Code/kapadia/src'
+let g:netrw_dirhist_7='/home/master/Code/noorani_solution/nms/src/components/header'
+let g:netrw_dirhist_6='/home/master/.config/nvim'
+let g:netrw_dirhist_5='/home/master/.config'
+let g:netrw_dirhist_4='/home/master'
+let g:netrw_dirhist_3='/home/master/Code/noorani_solution/DigiCard/client/src/pages/home'
+let g:netrw_dirhist_2='/home/master/.oh-my-zsh/themes'
+let g:netrw_dirhist_1='/home/master/Code/noorani_solution/nms/src/components/showcase'
